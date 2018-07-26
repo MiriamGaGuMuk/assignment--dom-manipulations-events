@@ -32,26 +32,32 @@ var tasks = [
     html_id: "hide-nav",
     task: "Add a button into the answer-box that, when clicked, will toggle the visibility of the nav menu.\
 	 <br/><br/><u>Hint</u>\
-	 <br/><span class='hint'>The easiest way is probably to add/remove the class <code>nav-menu-hidden</code> on the nav element.</hint>",
+	 <br/><span class='hint'>The easiest way is probably to add/remove the class <code>nav-menu-hidden</code> on the nav element. You may want to use \
+   To manipulate class names on elements you may want to research the <code>.classList.add()</code>, <code>.classList.remove()</code>, \
+   and <code>.classList.contains()</code> methods </span>",
     link: "gifs/toggle-vis.gif"
   },
   {
     html_id: "select-items",
     task: "When you click on an element it should add or remove a class of <code>'selected'</code> to the element that was clicked.\
 	 <br/><br/><u>Hint</u>\
-	 <span class='hint'>You will likely want to use <code>evt.currentTarget</code> rather than <code>evt.target</code></span> ",
+	 <span class='hint'>You will need to place an eventListener on <em>all</em> the <code>&lt;div class='option'&gt;</code> elements. \
+    You likely want to use <code>evt.currentTarget</code> rather than <code>evt.target</code> to capture the <code>div</code> element and not the <code>i</code> element</span> ",
     link: "gifs/select-items.gif"
   },
   {
 	 html_id: "add-vals",
-	 task: "When you click on a button with a number, it should increase the total by that amount.",
+	 task: "When you click on a button with a number, it should increase the total by that amount. \
+   <br/><br/><u>Hint</u>\
+   <span class='hint'>You will need to use <code>parseInt</code> to convert the DOM elements' textContent to an integer value \
+   to perform the appropriate math operations.</span>",
 	 link: "gifs/add-vals.gif"
   },
   {
     html_id: "list-2-list",
     task: "When you click on an element it should be put on the other list\
 	  <br/><br/><u>Hint</u>\
-     <br/><span class='hint'>To solve this you will need to select all of the <code>&lt;li&gt;</code> elements,\
+     <br/><span class='hint'>To solve this you will need to select all of the <code>&lt;li class='individual'&gt;</code> elements,\
      <br/> iterate over them and put an event listener (<code>.addEventListener</code>)  on each element.</em> \
 	  <br/><br/>Some properties/methods you may want to consider: <code>.parentNode</code> and <code>.appendChild</code>.</span>",
     link: "gifs/move-list-items.gif"
