@@ -32,7 +32,7 @@ var tasks = [
     html_id: "hide-nav",
     task: "Add a button into the answer-box that, when clicked, will toggle the visibility of the nav menu.\
 	 <br/><br/><u>Hint</u>\
-	 <br/><span class='hint'>The easiest way is probably to add/remove the class <code>nav-menu-hidden</code> on the nav element. You may want to use \
+	 <br/><span class='hint'>The easiest way is probably to add/remove the class <code>nav-menu-hidden</code> on the nav element.\
    To manipulate class names on elements you may want to research the <code>.classList.add()</code>, <code>.classList.remove()</code>, \
    and <code>.classList.contains()</code> methods </span>",
     link: "gifs/toggle-vis.gif"
