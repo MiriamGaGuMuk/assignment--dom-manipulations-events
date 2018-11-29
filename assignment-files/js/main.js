@@ -3,6 +3,9 @@
 
 /* TASK 1 -- Show/Hide Nav */
 
+document.querySelector('#hide-nav button').addEventListener('click', function() {
+    document.querySelector('#hide-nav .nav-menu').classList.toggle('nav-menu-hidden');
+
 
 /* TASK 2 -- Select/Deslect an Icon */
 
