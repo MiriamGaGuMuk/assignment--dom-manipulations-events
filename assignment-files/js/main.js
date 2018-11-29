@@ -27,6 +27,18 @@ for (let i = 0; i < selector.length; i++) {
 
 
 /* TASK 4 (Adventure Mode)-- Move Item List to List */
+let selector = document.querySelectorAll('.individual');
+for (let i = 0; i < selector.length; i++) {
+  selector[i].addEventListener('click', function(evt) {
+    let list = evt.currentTarget;
+    let destiny = 'good-standing-list';
+    if (list.parentNode.className === 'good-standing-list') {
+      destiny = 'probation-list';
+    }
+    document.querySelector('ul.' + destiny).appendChild(list);
+  })
+}
 
 
 /* TASK 5 (Adventure Mode) -- Change Text Background Color From Palette */
+
