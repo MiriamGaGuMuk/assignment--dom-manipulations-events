@@ -16,6 +16,14 @@ for (let i = 0; i < selector.length; i++) {
 }
 
 /* TASK 3 -- Increase total number*/
+let selector = document.querySelectorAll('#add-vals button');
+for (let i = 0; i < selector.length; i++) {
+  selector[i].addEventListener('click', function(evt) {
+    let increment = parseInt(evt.currentTarget.textContent);
+    let current = parseInt(document.querySelector('#add-vals .total-points').textContent);
+    document.querySelector('#add-vals .total-points').textContent = current + increment;
+  })
+}
 
 
 /* TASK 4 (Adventure Mode)-- Move Item List to List */
