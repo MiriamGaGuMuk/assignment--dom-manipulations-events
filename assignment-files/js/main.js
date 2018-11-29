@@ -8,7 +8,12 @@ document.querySelector('#hide-nav button').addEventListener('click', function() 
 
 
 /* TASK 2 -- Select/Deslect an Icon */
-
+let selector = document.querySelectorAll('#select-items .wish-list .option');
+for (let i = 0; i < selector.length; i++) {
+  selector[i].addEventListener('click', function(evt) {
+    evt.currentTarget.classList.toggle('selected');
+  })
+}
 
 /* TASK 3 -- Increase total number*/
 
