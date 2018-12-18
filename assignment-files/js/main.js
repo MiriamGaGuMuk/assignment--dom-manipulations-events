@@ -3,9 +3,24 @@
 
 /* TASK 1 -- Show/Hide Nav */
 
-document.querySelector('#hide-nav button').addEventListener('click', function() {
-
-document.querySelector('#hide-nav .nav-menu').classList.toggle('nav-menu-hidden');
+let i = 0
+document.querySelector(".answer-box button").addEventListener('click',function(){
+    i ++
+    let navMenu = document.querySelector(".nav-menu");
+    // console.log(navMenu);
+    let button = document.querySelector(".answer-box button");
+    // console.log(button.textContent);
+    if (i%2 !== 0) {
+    // navMenu.style.visibility ='hidden'
+    button.textContent = "Hide nav"
+    }
+    else {
+    // navMenu.style.visibility ='visible'
+    button.textContent = "Show nav"
+    }
+    // cambiar clases
+    navMenu.classList.toggle("nav-menu-hidden")
+})
 
 
 /* TASK 2 -- Select/Deslect an Icon */
