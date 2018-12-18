@@ -24,16 +24,17 @@ document.querySelector(".answer-box button").addEventListener('click',function()
 
 
 /* TASK 2 -- Select/Deslect an Icon */
-let wishList = document.querySelectorAll('#select-items .wish-list .option');
-
-for (let i = 0; i < selector.length; i++) {
-
-    wishList[i].addEventListener('click', function(evt) {
-
-    evt.currentTarget.classList.toggle('selected');
-
-  });
+let divTag = document.querySelectorAll(".wish-list div")
+function changeClass (){
+  let currenElement = this
+  console.log(currenElement);
+  currenElement.classList.toggle("selected")
 }
+let divCollection = [...divTag] 
+  for (let i = 0; i < divCollection.length; i++) {
+    let button = divCollection[i]
+    button.addEventListener('click', changeClass)
+  }
 
 /* TASK 3 -- Increase total number*/
 let totalpoints = document.querySelectorAll('#add-vals button');
