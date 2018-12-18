@@ -47,23 +47,24 @@ document.querySelectorAll('.point').forEach( btn => {
 })
 
 /* TASK 4 (Adventure Mode)-- Move Item List to List */
-let selector = document.querySelectorAll('.individual');
+    let standing = document.querySelector('.good-standing-list');
+    let probation = document.querySelector('.probation-list');
 
-for (let i = 0; i < selector.length; i++) {
+document.querySelectorAll('.individual').forEach(function (list) {
+    list.addEventListener('click', function () {
 
-  selector[i].addEventListener('click', function(evt) {
+        if (list.parentNode.className === "good-standing-list") {
+            probation.appendChild(list);
+            standing.removeChild(list);
+        }
 
-    let list = evt.currentTarget;
-    let destiny = 'good-standing-list';
+        if (list.parentNode.className === "probation-list") {
+            standing.appendChild(list);
+            probation.removeChild(list);
+        }
 
-    if (list.parentNode.className === 'good-standing-list') {
-      destiny = 'probation-list';
-    }
-
-    document.querySelector('ul.' + destiny).appendChild(list);
-  });
-}
-
+    })
+})
 
 /* TASK 5 (Adventure Mode) -- Change Text Background Color From Palette */
 let palete = document.querySelectorAll(".palette span")
