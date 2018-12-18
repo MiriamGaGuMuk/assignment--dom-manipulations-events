@@ -24,17 +24,21 @@ document.querySelector(".answer-box button").addEventListener('click',function()
 
 
 /* TASK 2 -- Select/Deslect an Icon */
-let divTag = document.querySelectorAll(".wish-list div")
-function changeClass (){
-  let currenElement = this
-  console.log(currenElement);
-  currenElement.classList.toggle("selected")
-}
-let divCollection = [...divTag] 
-  for (let i = 0; i < divCollection.length; i++) {
-    let button = divCollection[i]
-    button.addEventListener('click', changeClass)
+function white(e) {
+  e.currentTarget.style.cssText = "color:black;   background:rgb(189, 195, 199);"
   }
+
+  function black(e) {
+    e.currentTarget.style.cssText = "color:white;   background: #67809F;"
+  }
+  var box = document.querySelectorAll('.option')
+
+    for(var i = 0; i < box.length; i++){
+    box[i].addEventListener('click', white,);
+    }
+    for(var i = 0; i < box.length; i++){
+    box[i].addEventListener('click', black,);
+    }
 
 /* TASK 3 -- Increase total number*/
 let totalpoints = document.querySelectorAll('#add-vals button');
