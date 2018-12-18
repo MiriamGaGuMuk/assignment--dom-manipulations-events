@@ -24,21 +24,20 @@ document.querySelector(".answer-box button").addEventListener('click',function()
 
 
 /* TASK 2 -- Select/Deslect an Icon */
-function white(e) {
-  e.currentTarget.style.cssText = "color:black;   background:rgb(189, 195, 199);"
-  }
 
-  function black(e) {
-    e.currentTarget.style.cssText = "color:white;   background: #67809F;"
-  }
-  var box = document.querySelectorAll('.option')
+document.querySelectorAll(".option").forEach(function (div) {
+    
+    div.addEventListener('click', function (e) {
+        
+        if (e.currentTarget.className === "option") {
+            e.currentTarget.classList.add('selected')
+            
+        } else {
+            e.currentTarget.classList.remove('selected')
+        }
 
-    for(var i = 0; i < box.length; i++){
-    box[i].addEventListener('click', white,);
-    }
-    for(var i = 0; i < box.length; i++){
-    box[i].addEventListener('click', black,);
-    }
+    })
+})
 
 /* TASK 3 -- Increase total number*/
 let totalpoints = document.querySelectorAll('#add-vals button');
