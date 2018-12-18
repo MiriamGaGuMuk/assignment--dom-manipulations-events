@@ -40,20 +40,11 @@ document.querySelectorAll(".option").forEach(function (div) {
 })
 
 /* TASK 3 -- Increase total number*/
-let totalpoints = document.querySelectorAll('#add-vals button');
-
-for (let i = 0; i < selector.length; i++) {
-
-    totalpoints[i].addEventListener('click', function(evt) {
-
-    let increment = parseInt(evt.currentTarget.textContent);
-
-    let current = parseInt(document.querySelector('#add-vals .total-points').textContent);
-
-    document.querySelector('#add-vals .total-points').textContent = current + increment;
-  });
-}
-
+document.querySelectorAll('.point').forEach( btn => {
+    
+  let total = document.querySelector('.total-points');
+  btn.addEventListener('click', ()=> total.textContent = parseInt(total.textContent) + parseInt(btn.textContent));
+})
 
 /* TASK 4 (Adventure Mode)-- Move Item List to List */
 let selector = document.querySelectorAll('.individual');
