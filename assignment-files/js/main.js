@@ -8,12 +8,15 @@ document.querySelector(".answer-box button").addEventListener('click',function()
     i ++
     let navMenu = document.querySelector(".nav-menu");
     // console.log(navMenu);
+    
     let button = document.querySelector(".answer-box button");
     // console.log(button.textContent);
+
     if (i%2 !== 0) {
     // navMenu.style.visibility ='hidden'
     button.textContent = "Hide nav"
     }
+    
     else {
     // navMenu.style.visibility ='visible'
     button.textContent = "Show nav"
